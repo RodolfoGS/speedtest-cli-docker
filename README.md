@@ -1,6 +1,6 @@
 ## speedtest-cli Docker image
 
-Just install `speedtest-cli`
+Just installs `speedtest-cli`
 - More info: https://github.com/sivel/speedtest-cli
 - Image: https://hub.docker.com/r/rodolfogs/speedtest-cli
 
