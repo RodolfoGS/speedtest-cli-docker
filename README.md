@@ -6,7 +6,7 @@ Just installs `speedtest-cli`
 
 ### Run
 ```
-docker run --rm rodolfogs/speedtest-cli
+docker run --rm rodolfogs/speedtest-cli:latest
 ```
 
 ### Build
@@ -20,8 +20,19 @@ docker tag speedtest-cli rodolfogs/speedtest-cli:<version>
 docker push rodolfogs/speedtest-cli:<version>
 ```
 
+### Build and Push multiplatform
+```
+docker buildx build --push \
+  --platform=linux/arm64,linux/amd64 \
+  --tag=rodolfogs/speedtest-cli:<version> .
+```
+
 ### Dockerfile
 [Dockerfile](./Dockerfile)
 
 ### Usage
-https://github.com/sivel/speedtest-cli?tab=readme-ov-file#usage
+```
+docker run --rm rodolfogs/speedtest-cli:latest --help
+```
+
+Docs: https://github.com/sivel/speedtest-cli?tab=readme-ov-file#usage
